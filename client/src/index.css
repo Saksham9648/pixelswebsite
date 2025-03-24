@@ -13,7 +13,7 @@
     --popover: 240 10% 12%;
     --popover-foreground: 0 0% 100%;
     
-    --primary: 270 76% 53%;
+    --primary: 215 80% 55%; /* Changed to a nice blue color */
     --primary-foreground: 0 0% 100%;
     
     --secondary: 179 100% 41%;
@@ -22,7 +22,7 @@
     --muted: 240 5% 18%;
     --muted-foreground: 0 0% 60%;
     
-    --accent: 270 76% 20%;
+    --accent: 215 80% 20%;
     --accent-foreground: 0 0% 100%;
     
     --destructive: 0 100% 50%;
@@ -30,7 +30,7 @@
     
     --border: 240 5% 20%;
     --input: 240 5% 20%;
-    --ring: 270 76% 53%;
+    --ring: 215 80% 55%;
     
     --radius: 0.5rem;
   }
@@ -43,42 +43,54 @@
     @apply font-sans antialiased bg-background text-foreground;
   }
 
+  h1, h2, h3, h4, h5, h6 {
+    @apply tracking-tight;
+  }
+
+  section {
+    @apply py-16 md:py-24 lg:py-32;
+  }
+
+  .container {
+    @apply px-4 md:px-6 lg:px-8;
+  }
+
   /* Custom animations */
   @keyframes float {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-10px); }
   }
 
-  @keyframes glow {
-    0% { box-shadow: 0 0 5px rgba(138, 43, 226, 0.5); }
-    100% { box-shadow: 0 0 15px rgba(138, 43, 226, 0.8), 0 0 20px rgba(0, 206, 209, 0.6); }
-  }
-
   /* Utility classes */
-  .gradient-text {
-    @apply bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent;
+  .blue-text {
+    @apply text-primary;
   }
 
   .animate-float {
     animation: float 3s ease-in-out infinite;
   }
 
-  .animate-glow {
-    animation: glow 2s ease-in-out infinite alternate;
-  }
-
   .grid-bg {
-    background-image: radial-gradient(rgba(138, 43, 226, 0.1) 1px, transparent 1px);
+    background-image: radial-gradient(rgba(37, 99, 235, 0.1) 1px, transparent 1px);
     background-size: 20px 20px;
   }
 
   .card-3d {
-    transition: transform 0.8s;
+    transition: transform 0.5s;
     transform-style: preserve-3d;
   }
 
   .card-3d:hover {
-    transform: rotateY(10deg) rotateX(5deg);
+    transform: rotateY(5deg) rotateX(2deg);
+  }
+
+  /* Section spacing */
+  .section-spacing {
+    @apply py-8 md:py-12 lg:py-16;
+  }
+
+  .element-spacing {
+    @apply my-6 md:my-8;
   }
 
   /* Custom scrollbar */

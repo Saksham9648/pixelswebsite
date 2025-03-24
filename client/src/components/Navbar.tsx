@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
+import { FiHome, FiInfo, FiLayers, FiBriefcase, FiDollarSign, FiUsers, FiHelpCircle, FiMessageSquare, FiMenu } from "react-icons/fi";
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -33,15 +34,15 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full bg-background/90 backdrop-blur-md z-50 transition-all duration-300 ${
-        isScrolled ? "py-2" : "py-4"
+      className={`fixed top-0 left-0 w-full bg-background/95 backdrop-blur-md z-50 transition-all duration-300 shadow-md ${
+        isScrolled ? "py-3" : "py-5"
       }`}
     >
-      <div className="container mx-auto px-4 flex items-center justify-between">
+      <div className="container mx-auto flex items-center justify-between">
         {/* Logo */}
         <Link href="/">
           <a className="flex items-center space-x-2">
-            <span className="text-2xl font-montserrat font-bold gradient-text">
+            <span className="text-2xl font-montserrat font-bold blue-text">
               PixelsBeing
             </span>
           </a>
@@ -53,7 +54,7 @@ const Navbar = () => {
           className="lg:hidden text-foreground focus:outline-none"
           aria-label="Toggle mobile menu"
         >
-          <i className="fas fa-bars text-xl"></i>
+          <FiMenu className="text-2xl" />
         </button>
 
         {/* Desktop Menu */}
@@ -64,8 +65,9 @@ const Navbar = () => {
                 isActive("/")
                   ? "text-primary"
                   : "text-foreground hover:text-primary"
-              } transition-colors duration-300 font-medium`}
+              } transition-colors duration-300 font-medium flex items-center gap-1`}
             >
+              <FiHome className="inline-block" />
               Home
             </a>
           </Link>
@@ -75,8 +77,9 @@ const Navbar = () => {
                 isActive("/about")
                   ? "text-primary"
                   : "text-foreground hover:text-primary"
-              } transition-colors duration-300 font-medium`}
+              } transition-colors duration-300 font-medium flex items-center gap-1`}
             >
+              <FiInfo className="inline-block" />
               About
             </a>
           </Link>
@@ -86,8 +89,9 @@ const Navbar = () => {
                 isActive("/services")
                   ? "text-primary"
                   : "text-foreground hover:text-primary"
-              } transition-colors duration-300 font-medium`}
+              } transition-colors duration-300 font-medium flex items-center gap-1`}
             >
+              <FiLayers className="inline-block" />
               Services
             </a>
           </Link>
@@ -97,8 +101,9 @@ const Navbar = () => {
                 isActive("/portfolio")
                   ? "text-primary"
                   : "text-foreground hover:text-primary"
-              } transition-colors duration-300 font-medium`}
+              } transition-colors duration-300 font-medium flex items-center gap-1`}
             >
+              <FiBriefcase className="inline-block" />
               Portfolio
             </a>
           </Link>
@@ -108,8 +113,9 @@ const Navbar = () => {
                 isActive("/pricing")
                   ? "text-primary"
                   : "text-foreground hover:text-primary"
-              } transition-colors duration-300 font-medium`}
+              } transition-colors duration-300 font-medium flex items-center gap-1`}
             >
+              <FiDollarSign className="inline-block" />
               Pricing
             </a>
           </Link>
@@ -119,8 +125,9 @@ const Navbar = () => {
                 isActive("/refer-earn")
                   ? "text-primary"
                   : "text-foreground hover:text-primary"
-              } transition-colors duration-300 font-medium`}
+              } transition-colors duration-300 font-medium flex items-center gap-1`}
             >
+              <FiUsers className="inline-block" />
               Refer & Earn
             </a>
           </Link>
@@ -130,13 +137,15 @@ const Navbar = () => {
                 isActive("/faq")
                   ? "text-primary"
                   : "text-foreground hover:text-primary"
-              } transition-colors duration-300 font-medium`}
+              } transition-colors duration-300 font-medium flex items-center gap-1`}
             >
+              <FiHelpCircle className="inline-block" />
               FAQ
             </a>
           </Link>
           <Link href="/contact">
-            <a className="animate-glow bg-primary hover:bg-primary/90 text-white px-5 py-2 rounded-full transition-all duration-300">
+            <a className="bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-full transition-all duration-300 flex items-center gap-1 shadow-md">
+              <FiMessageSquare className="inline-block" />
               Contact Us
             </a>
           </Link>
@@ -149,7 +158,7 @@ const Navbar = () => {
           mobileMenuOpen ? "block" : "hidden"
         } bg-card lg:hidden`}
       >
-        <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
+        <div className="container mx-auto py-4 flex flex-col space-y-4">
           <Link href="/">
             <a
               onClick={closeMobileMenu}
@@ -157,8 +166,9 @@ const Navbar = () => {
                 isActive("/")
                   ? "text-primary"
                   : "text-foreground hover:text-primary"
-              } transition-colors duration-300 py-2 font-medium`}
+              } transition-colors duration-300 py-2 font-medium flex items-center gap-2`}
             >
+              <FiHome className="text-lg" />
               Home
             </a>
           </Link>
@@ -169,8 +179,9 @@ const Navbar = () => {
                 isActive("/about")
                   ? "text-primary"
                   : "text-foreground hover:text-primary"
-              } transition-colors duration-300 py-2 font-medium`}
+              } transition-colors duration-300 py-2 font-medium flex items-center gap-2`}
             >
+              <FiInfo className="text-lg" />
               About
             </a>
           </Link>
@@ -181,8 +192,9 @@ const Navbar = () => {
                 isActive("/services")
                   ? "text-primary"
                   : "text-foreground hover:text-primary"
-              } transition-colors duration-300 py-2 font-medium`}
+              } transition-colors duration-300 py-2 font-medium flex items-center gap-2`}
             >
+              <FiLayers className="text-lg" />
               Services
             </a>
           </Link>
@@ -193,8 +205,9 @@ const Navbar = () => {
                 isActive("/portfolio")
                   ? "text-primary"
                   : "text-foreground hover:text-primary"
-              } transition-colors duration-300 py-2 font-medium`}
+              } transition-colors duration-300 py-2 font-medium flex items-center gap-2`}
             >
+              <FiBriefcase className="text-lg" />
               Portfolio
             </a>
           </Link>
@@ -205,8 +218,9 @@ const Navbar = () => {
                 isActive("/pricing")
                   ? "text-primary"
                   : "text-foreground hover:text-primary"
-              } transition-colors duration-300 py-2 font-medium`}
+              } transition-colors duration-300 py-2 font-medium flex items-center gap-2`}
             >
+              <FiDollarSign className="text-lg" />
               Pricing
             </a>
           </Link>
@@ -217,8 +231,9 @@ const Navbar = () => {
                 isActive("/refer-earn")
                   ? "text-primary"
                   : "text-foreground hover:text-primary"
-              } transition-colors duration-300 py-2 font-medium`}
+              } transition-colors duration-300 py-2 font-medium flex items-center gap-2`}
             >
+              <FiUsers className="text-lg" />
               Refer & Earn
             </a>
           </Link>
@@ -229,16 +244,18 @@ const Navbar = () => {
                 isActive("/faq")
                   ? "text-primary"
                   : "text-foreground hover:text-primary"
-              } transition-colors duration-300 py-2 font-medium`}
+              } transition-colors duration-300 py-2 font-medium flex items-center gap-2`}
             >
+              <FiHelpCircle className="text-lg" />
               FAQ
             </a>
           </Link>
           <Link href="/contact">
             <a
               onClick={closeMobileMenu}
-              className="animate-glow bg-primary hover:bg-primary/90 text-white px-5 py-2 rounded-full inline-block text-center transition-all duration-300"
+              className="bg-primary hover:bg-primary/90 text-white px-5 py-3 rounded-full inline-flex items-center gap-2 transition-all duration-300 shadow-md mt-2"
             >
+              <FiMessageSquare className="text-lg" />
               Contact Us
             </a>
           </Link>
