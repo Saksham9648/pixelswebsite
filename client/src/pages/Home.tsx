@@ -5,10 +5,11 @@ import { Link } from "wouter";
 import ServiceCard from "@/components/ServiceCard";
 import PortfolioItem from "@/components/PortfolioItem";
 import { ServiceCardProps, PortfolioItemProps } from "@/lib/types";
+import { FiCode, FiSearch, FiSmartphone } from "react-icons/fi";
 
 const services: ServiceCardProps[] = [
   {
-    icon: "fas fa-laptop-code",
+    icon: "FiCode",
     title: "Web Development",
     description: "Custom-designed, responsive websites that drive engagement and conversions.",
     features: [
@@ -19,7 +20,7 @@ const services: ServiceCardProps[] = [
     ]
   },
   {
-    icon: "fas fa-search",
+    icon: "FiSearch",
     title: "SEO Services",
     description: "Data-driven strategies to improve your search rankings and organic traffic.",
     features: [
@@ -30,7 +31,7 @@ const services: ServiceCardProps[] = [
     ]
   },
   {
-    icon: "fas fa-mobile-alt",
+    icon: "FiSmartphone",
     title: "App Development",
     description: "Custom mobile applications that provide seamless user experiences.",
     features: [
@@ -76,8 +77,8 @@ const Home = () => {
       <Hero />
 
       {/* Services Section */}
-      <section id="services" className="relative py-20 bg-card">
-        <div className="container mx-auto px-4">
+      <section id="services" className="relative py-24 bg-card">
+        <div className="container mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -86,7 +87,7 @@ const Home = () => {
             className="text-center max-w-3xl mx-auto mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-montserrat font-bold mb-6">
-              Our <span className="gradient-text">Premium Services</span>
+              Our <span className="blue-text">Premium Services</span>
             </h2>
             <p className="text-muted-foreground text-lg">
               We offer comprehensive digital solutions tailored to meet your business needs and goals.
@@ -115,7 +116,7 @@ const Home = () => {
             className="mt-16 text-center"
           >
             <Link href="/portfolio">
-              <a className="animate-glow bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-full transition-all duration-300 font-medium">
+              <a className="bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-lg transition-all duration-300 font-medium shadow-md">
                 View Our Work
               </a>
             </Link>
@@ -124,8 +125,8 @@ const Home = () => {
       </section>
 
       {/* Portfolio Section */}
-      <section id="portfolio" className="py-20">
-        <div className="container mx-auto px-4">
+      <section id="portfolio" className="py-24">
+        <div className="container mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -134,14 +135,14 @@ const Home = () => {
             className="text-center max-w-3xl mx-auto mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-montserrat font-bold mb-6">
-              Our <span className="gradient-text">Portfolio</span>
+              Our <span className="blue-text">Portfolio</span>
             </h2>
             <p className="text-muted-foreground text-lg">
               Explore our recent projects that showcase our expertise and creativity.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
             {portfolioItems.map((item, index) => (
               <motion.div
                 key={index}
@@ -163,7 +164,7 @@ const Home = () => {
             className="mt-16 text-center"
           >
             <Link href="/contact">
-              <a className="relative bg-muted hover:bg-muted/70 text-foreground px-8 py-3 rounded-full transition-all duration-300 font-medium border border-primary/30">
+              <a className="relative bg-muted hover:bg-muted/70 text-foreground px-8 py-3 rounded-lg transition-all duration-300 font-medium border border-primary/30">
                 Start Your Project
               </a>
             </Link>
