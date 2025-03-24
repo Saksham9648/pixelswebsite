@@ -3,9 +3,12 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { motion } from "framer-motion";
-import { FiUser, FiMail, FiPhone, FiList, FiMessageSquare, FiSend, FiCheckCircle } from "react-icons/fi";
+import { FiUser, FiMail, FiPhone, FiList, FiMessageSquare, FiSend, FiCheckCircle, FiAlertCircle } from "react-icons/fi";
 import { ContactFormData } from "@/lib/types";
 import { useToast } from "@/hooks/use-toast";
+
+// Google Apps Script deployed URL - this would be replaced with your actual script URL
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/YOUR_GOOGLE_SCRIPT_ID/exec";
 
 const contactFormSchema = z.object({
   name: z.string().min(2, "Name is required"),
@@ -18,6 +21,7 @@ const contactFormSchema = z.object({
 const ContactForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const { toast } = useToast();
   
   const {
@@ -27,17 +31,36 @@ const ContactForm = () => {
     formState: { errors },
   } = useForm<ContactFormData>({
     resolver: zodResolver(contactFormSchema),
+    defaultValues: {
+      service: "",
+    }
   });
 
   const onSubmit = async (data: ContactFormData) => {
     setIsSubmitting(true);
+    setError(null);
     
     try {
-      // In a real app, this would send data to a server
-      // For now, we'll simulate a successful submission
+      // Prepare form data for submission
+      const formData = new FormData();
+      Object.entries(data).forEach(([key, value]) => {
+        formData.append(key, value);
+      });
+      
+      // For demo/development purposes without a real Google Script URL
+      // Comment this section and uncomment the fetch below when you have a real script URL
+      console.log("Form data ready for Google Sheets:", data);
       await new Promise((resolve) => setTimeout(resolve, 1000));
       
-      console.log("Form submitted:", data);
+      // Uncomment the following code when you have a valid Google Script URL
+      /* 
+      const response = await fetch(GOOGLE_SCRIPT_URL, {
+        method: "POST",
+        body: formData,
+        mode: "no-cors" // This is important for CORS issues with Google Apps Script
+      });
+      */
+      
       setIsSuccess(true);
       reset();
       
@@ -47,11 +70,14 @@ const ContactForm = () => {
         variant: "default",
       });
       
-      // Reset success message after 5 seconds
+      // Reset success message after 8 seconds
       setTimeout(() => {
         setIsSuccess(false);
-      }, 5000);
-    } catch (error) {
+      }, 8000);
+    } catch (err) {
+      console.error("Error submitting form:", err);
+      setError("There was a problem sending your message. Please try again.");
+      
       toast({
         title: "Error",
         description: "There was a problem sending your message. Please try again.",
@@ -149,6 +175,8 @@ const ContactForm = () => {
             <option value="web-development">Web Development</option>
             <option value="seo">SEO Services</option>
             <option value="app-development">App Development</option>
+            <option value="digital-marketing">Digital Marketing</option>
+            <option value="ui-ux-design">UI/UX Design</option>
             <option value="other">Other</option>
           </select>
           {errors.service && (
@@ -210,6 +238,54 @@ const ContactForm = () => {
           </div>
         </motion.div>
       )}
+      
+      {error && (
+        <motion.div 
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="mt-6 bg-destructive/10 border border-destructive/30 text-foreground p-6 rounded-lg flex items-start gap-3"
+        >
+          <FiAlertCircle className="text-destructive text-xl mt-1 flex-shrink-0" />
+          <div>
+            <h4 className="font-semibold mb-1">Error Sending Message</h4>
+            <p className="text-muted-foreground">{error}</p>
+          </div>
+        </motion.div>
+      )}
+      
+      {/* Instructions for Google Apps Script Integration */}
+      <div className="mt-8 border-t border-border pt-6 text-sm text-muted-foreground">
+        <p className="mb-2"><strong>Note for deployment:</strong> To integrate with Google Sheets:</p>
+        <ol className="list-decimal list-inside space-y-1">
+          <li>Create a Google Sheet with columns for: name, email, phone, service, message, timestamp</li>
+          <li>Create a Google Apps Script with the following code:</li>
+        </ol>
+        <div className="bg-muted p-4 rounded-md mt-2 text-xs overflow-x-auto">
+          <pre>{`
+// Google Apps Script Code
+function doPost(e) {
+  var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+  var data = e.parameter;
+  
+  // Add a new row with form data
+  sheet.appendRow([
+    data.name,
+    data.email,
+    data.phone,
+    data.service,
+    data.message,
+    new Date() // timestamp
+  ]);
+  
+  // Return success response
+  return ContentService
+    .createTextOutput(JSON.stringify({ 'result': 'success' }))
+    .setMimeType(ContentService.MimeType.JSON);
+}
+          `}</pre>
+        </div>
+        <p className="mt-2">3. Deploy the script as a web app (accessible to anyone) and replace the GOOGLE_SCRIPT_URL in the code with your deployed script URL.</p>
+      </div>
     </motion.div>
   );
 };
