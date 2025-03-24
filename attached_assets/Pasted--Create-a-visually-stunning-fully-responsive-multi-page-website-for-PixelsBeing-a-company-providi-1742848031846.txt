@@ -1,0 +1,64 @@
+"Create a visually stunning, fully responsive, multi-page website for PixelsBeing, a company providing web development, SEO, and app development services. The website should have a cutting-edge, modern, and engaging dark-themed design. Implement the following features and requirements:"
+1. Stunning Homepage Design
+
+    Design the homepage to be super cool, visually engaging, and modern.
+
+    Use dynamic animations, interactive elements, and smooth transitions to make it stand out.
+
+    Integrate 3D components and subtle motion effects for a premium feel.
+
+    The layout should be well-structured, with a hero section that immediately captures attention.
+
+    Include bold typography, high-quality images, and futuristic UI elements.
+
+2. Dark-Themed Multi-Page Structure
+
+Create a multi-page website with the following sections:
+
+    Home (Showcase services creatively, with stunning visuals)
+
+    About Us (Company story, mission, and team details)
+
+    Services (Web development, SEO, app development, and more)
+
+    Portfolio (Showcase past projects with interactive previews)
+
+    Pricing (Tier-based pricing with an aesthetic background featuring lines and patterns)
+
+    Refer & Earn (Referral program details with an incentive structure)
+
+    FAQ (Interactive accordion-style FAQ section)
+
+    Contact (Form submission, two phone numbers, and email option)
+
+3. Dark Mode Implementation
+
+    Dont use the dark mode toggle button and make the entire website dark mode by default.
+
+    Ensure proper contrast, readability, and smooth UI experience in dark mode.
+
+4. SEO Optimization
+
+    Optimize for search engines with SEO-friendly elements (meta tags, structured data, optimized images).
+
+    Targeted keywords: "web developer in Lakhimpur," "web developer in Gonda," "web developer in Sitapur," "best web developer in Lucknow."
+
+5. Call to Action (CTA) & Contact Features
+
+    Keep strong CTAs on every page, ensuring users can easily contact PixelsBeing.
+
+    Provide multiple contact options:
+
+        Form submission
+
+        Phone call (two numbers)
+
+        Email
+
+    Add a sticky contact button for instant access to communication.
+
+6. Performance & Mobile Responsiveness
+
+    Ensure the website is fully responsive across all devices (desktop, tablet, mobile).
+
+    Optimize animations and images for fast loading without sacrificing quality.
