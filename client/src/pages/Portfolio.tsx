@@ -6,41 +6,40 @@ import { PortfolioItemProps } from "@/lib/types";
 
 const portfolioItems: PortfolioItemProps[] = [
   {
-    image: "https://images.unsplash.com/photo-1546054454-aa26e2b734c7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
-    title: "LuxeCart E-commerce",
-    description: "A premium online shopping experience with integrated payment solutions and inventory management.",
-    tags: ["Web Development", "E-commerce", "UX Design"]
+    image: "https://i.postimg.cc/ZK86g0fc/Screenshot-2025-04-02-09-14-24-41-b5a5c5cb02ca09c784c5d88160e2ec24.jpg",
+    title: "BeingxBot",
+    description: "BeingxBot is a digital solutions platform powered by Pixels Being, offering innovative web development, SEO, and user-friendly digital experiences to enhance brand growth.",
+    tags: ["Web Development", "E-commerce", "UX Design"],
+    link: "https://beingxbot.tech"
   },
   {
-    image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
-    title: "FitTrack Mobile App",
-    description: "A health and fitness tracking application with personalized workout plans and progress analytics.",
-    tags: ["App Development", "UI/UX Design", "iOS & Android"]
+    image: "https://i.postimg.cc/zXZn0Tkv/Screenshot-2025-04-02-09-14-51-18-b5a5c5cb02ca09c784c5d88160e2ec24.jpg",
+    title: "Bookify App",
+    description: "Bookify by Pixels Being is a smart booking app that simplifies appointment scheduling with an intuitive and seamless experience.",
+    tags: ["App Development", "UI/UX Design", "iOS & Android"],
+    link: "https://play.google.com/store/apps/details?id=com.bookify.app"
   },
   {
-    image: "https://images.unsplash.com/photo-1557838923-2985c318be48?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
-    title: "GreenEarth SEO Campaign",
-    description: "A comprehensive SEO strategy that increased organic traffic by 287% for an eco-friendly products company.",
-    tags: ["SEO", "Content Marketing", "Analytics"]
+    image: "https://i.postimg.cc/8CbMQygy/Picsart-24-12-30-11-55-57-575.png",
+    title: "Home Tuition Wala SEO Campaign",
+    description: "A comprehensive SEO strategy that increased organic traffic by 287% for a home tuition providing company.",
+    tags: ["SEO", "Content Marketing", "Analytics"],
+    link: "https://67738ad0644e61c07776d298--superlative-sprinkles-f01280.netlify.app/"
   },
   {
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
-    title: "FinServe Banking Portal",
-    description: "A secure online banking platform with advanced transaction features and account management.",
-    tags: ["Web Development", "Security", "Fintech"]
+    image: "https://i.postimg.cc/c18RRFwP/Screenshot-2025-04-02-09-16-55-25-40deb401b9ffe8e1df2f1cc5ba480b12.jpg",
+    title: "Narayan Home Tutors",
+    description: "Narayan Home Tutors is a personalized tutoring platform developed by Pixels Being, connecting students with expert tutors for quality education at home or online.",
+    tags: ["Web Development", "Security", "Fintech"],
+    link: "https://narayanhometutors.in/"
   },
   {
-    image: "https://images.unsplash.com/photo-1534972195531-d756b9bfa9f2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
-    title: "Wanderlust Travel App",
-    description: "A travel companion app with itinerary planning, booking integration, and local recommendations.",
-    tags: ["App Development", "Travel", "UI/UX Design"]
+    image: "https://i.postimg.cc/T3QgdFv5/Screenshot-2025-04-02-09-16-27-32-40deb401b9ffe8e1df2f1cc5ba480b12.jpg",
+    title: "Tuition Hub",
+    description: "Tuition Hub by Pixels Being is an advanced online platform connecting students with top tutors, offering seamless learning experiences.",
+    tags: ["Web Development", "Travel", "UI/UX Design"],
+    link: "https://tuitionhub.in"
   },
-  {
-    image: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
-    title: "CoreHR Corporate Website",
-    description: "A modern corporate website with integrated recruitment portal and client dashboard.",
-    tags: ["Web Development", "Corporate", "HR Solutions"]
-  }
 ];
 
 const Portfolio = () => {

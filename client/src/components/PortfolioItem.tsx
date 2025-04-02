@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { PortfolioItemProps } from "@/lib/types";
 import { FiExternalLink } from "react-icons/fi";
 
-const PortfolioItem = ({ image, title, description, tags }: PortfolioItemProps) => {
+const PortfolioItem = ({ image, title, description, tags, link }: PortfolioItemProps) => {
   return (
     <motion.div
       whileHover={{ y: -5 }}
@@ -16,7 +16,9 @@ const PortfolioItem = ({ image, title, description, tags }: PortfolioItemProps) 
         />
         <div className="absolute inset-0 bg-background/70 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
           <motion.a 
-            href="#" 
+            href={link} // Ensure link is used correctly
+            target="_blank" 
+            rel="noopener noreferrer"
             className="bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-lg transition-all duration-300 flex items-center gap-2 shadow-md"
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
@@ -46,5 +48,6 @@ const PortfolioItem = ({ image, title, description, tags }: PortfolioItemProps) 
     </motion.div>
   );
 };
+
 
 export default PortfolioItem;

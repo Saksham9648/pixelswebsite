@@ -66,7 +66,7 @@ const StickyContact = () => {
                   <div className="bg-primary/10 w-10 h-10 rounded-full flex items-center justify-center">
                     <FiPhone className="text-primary" />
                   </div>
-                  <span>+91 1234567890</span>
+                  <span>+91 8756309900</span>
                 </a>
                 <a
                   href="mailto:info@pixelsbeing.com"
@@ -75,7 +75,7 @@ const StickyContact = () => {
                   <div className="bg-primary/10 w-10 h-10 rounded-full flex items-center justify-center">
                     <FiMail className="text-primary" />
                   </div>
-                  <span>info@pixelsbeing.com</span>
+                  <span>pixelsbeing@gmail.com</span>
                 </a>
                 <Link href="/contact">
                   <a className="bg-primary hover:bg-primary/90 text-white py-3 px-4 text-center rounded-lg transition-all duration-300 mt-2 flex items-center justify-center gap-2 shadow-md">

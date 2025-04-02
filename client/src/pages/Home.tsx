@@ -126,51 +126,86 @@ const Home = () => {
 
       {/* Portfolio Section */}
       <section id="portfolio" className="py-24">
-        <div className="container mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="text-center max-w-3xl mx-auto mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-montserrat font-bold mb-6">
-              Our <span className="blue-text">Portfolio</span>
-            </h2>
-            <p className="text-muted-foreground text-lg">
-              Explore our recent projects that showcase our expertise and creativity.
-            </p>
-          </motion.div>
+  <div className="container mx-auto">
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5 }}
+      className="text-center max-w-3xl mx-auto mb-16"
+    >
+      <h2 className="text-3xl md:text-4xl font-montserrat font-bold mb-6">
+        Our <span className="blue-text">Portfolio</span>
+      </h2>
+      <p className="text-muted-foreground text-lg">
+        Explore our recent projects that showcase our expertise and creativity.
+      </p>
+    </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
-            {portfolioItems.map((item, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.2, duration: 0.5 }}
-              >
-                <PortfolioItem {...item} />
-              </motion.div>
-            ))}
-          </div>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.1, duration: 0.5 }}
+      >
+        <PortfolioItem
+          image="https://i.postimg.cc/ZK86g0fc/Screenshot-2025-04-02-09-14-24-41-b5a5c5cb02ca09c784c5d88160e2ec24.jpg"
+          title="BeingxBot"
+          description="BeingxBot is a digital solutions platform powered by Pixels Being, offering innovative web development, SEO, and user-friendly digital experiences to enhance brand growth."
+          tags={["Web Development", "E-commerce", "UX Design"]}
+          link="https://beingxbot.tech"
+        />
+      </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.6, duration: 0.5 }}
-            className="mt-16 text-center"
-          >
-            <Link href="/contact">
-              <a className="relative bg-muted hover:bg-muted/70 text-foreground px-8 py-3 rounded-lg transition-all duration-300 font-medium border border-primary/30">
-                Start Your Project
-              </a>
-            </Link>
-          </motion.div>
-        </div>
-      </section>
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.2, duration: 0.5 }}
+      >
+        <PortfolioItem
+          image="https://i.postimg.cc/zXZn0Tkv/Screenshot-2025-04-02-09-14-51-18-b5a5c5cb02ca09c784c5d88160e2ec24.jpg"
+          title="Bookify App"
+          description="Bookify by Pixels Being is a smart booking app that simplifies appointment scheduling with an intuitive and seamless experience."
+          tags={["App Development", "UI/UX Design", "iOS & Android"]}
+          link="https://play.google.com/store/apps/details?id=com.bookify.app"
+        />
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.3, duration: 0.5 }}
+      >
+        <PortfolioItem
+          image="https://i.postimg.cc/8CbMQygy/Picsart-24-12-30-11-55-57-575.png"
+          title="Home Tuition Wala SEO Campaign"
+          description="A comprehensive SEO strategy that increased organic traffic by 287% for a home tuition providing company."
+          tags={["SEO", "Content Marketing", "Analytics"]}
+          link="https://67738ad0644e61c07776d298--superlative-sprinkles-f01280.netlify.app"
+        />
+      </motion.div>
+    </div>
+
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ delay: 0.6, duration: 0.5 }}
+      className="mt-16 text-center"
+    >
+      <Link href="/contact">
+        <a className="relative bg-muted hover:bg-muted/70 text-foreground px-8 py-3 rounded-lg transition-all duration-300 font-medium border border-primary/30">
+          Start Your Project
+        </a>
+      </Link>
+    </motion.div>
+  </div>
+</section>
+
+
     </>
   );
 };

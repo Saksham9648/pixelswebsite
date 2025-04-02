@@ -8,7 +8,9 @@ import {
   FiHeart,
   FiShoppingCart,
   FiBarChart,
-  FiSettings
+  FiSettings,
+  FiYoutube,
+  FiGithub
 } from "react-icons/fi";
 import { 
   FiLinkedin, 
@@ -24,39 +26,39 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-16">
           {/* Company Info */}
           <div className="space-y-6">
-            <h3 className="text-2xl font-montserrat font-bold blue-text">PixelsBeing</h3>
+            <h3 className="text-2xl font-montserrat font-bold blue-text">Pixels Being</h3>
             <p className="text-muted-foreground">
               Transforming ideas into digital reality with innovative web
               development, SEO, and app development solutions.
             </p>
             <div className="flex space-x-4">
               <a
-                href="#"
+                href="https://www.instagram.com/pixelsbeing?igsh=NWw5b2ZiaDFhZm5m"
                 className="w-10 h-10 bg-muted rounded-full flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-primary/10 transition-colors duration-300"
-                aria-label="Facebook"
-              >
-                <FiFacebook />
-              </a>
-              <a
-                href="#"
-                className="w-10 h-10 bg-muted rounded-full flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-primary/10 transition-colors duration-300"
-                aria-label="Twitter"
-              >
-                <FiTwitter />
-              </a>
-              <a
-                href="#"
-                className="w-10 h-10 bg-muted rounded-full flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-primary/10 transition-colors duration-300"
-                aria-label="Instagram"
+                aria-label="Instagram" target="_blank"
               >
                 <FiInstagram />
               </a>
               <a
-                href="#"
+                href="https://youtube.com/@indo-cs?si=gb_tmTx4SOkjIvxK"
                 className="w-10 h-10 bg-muted rounded-full flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-primary/10 transition-colors duration-300"
-                aria-label="LinkedIn"
+                aria-label="Youtube" target="_blank"
+              >
+                <FiYoutube />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/pixels-being-02911635a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                className="w-10 h-10 bg-muted rounded-full flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-primary/10 transition-colors duration-300"
+                aria-label="Linkedin" target="_blank"
               >
                 <FiLinkedin />
+              </a>
+              <a
+                href="https://github.com/pixelsbeing"
+                className="w-10 h-10 bg-muted rounded-full flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-primary/10 transition-colors duration-300"
+                aria-label="Github" target="_blank"
+              >
+                <FiGithub />
               </a>
             </div>
           </div>
@@ -183,7 +185,7 @@ const Footer = () => {
                   <FiMap className="text-primary" />
                 </div>
                 <span className="text-muted-foreground">
-                  123 Tech Park, Civil Lines, Lucknow, UP
+                Nirmal nager Seth Ghat Road Lakhimpur, Uttar Pradesh 262701 India
                 </span>
               </li>
               <li className="flex items-start">
@@ -191,8 +193,8 @@ const Footer = () => {
                   <FiPhone className="text-primary" />
                 </div>
                 <div>
-                  <span className="text-muted-foreground block">+91 1234567890</span>
-                  <span className="text-muted-foreground block mt-1">+91 9876543210</span>
+                  <span className="text-muted-foreground block">+91 8756309900</span>
+                  <span className="text-muted-foreground block mt-1">+91 8604474985</span>
                 </div>
               </li>
               <li className="flex items-start">
@@ -200,7 +202,7 @@ const Footer = () => {
                   <FiMail className="text-primary" />
                 </div>
                 <span className="text-muted-foreground">
-                  info@pixelsbeing.com
+                  pixelsbeing@gmail.com
                 </span>
               </li>
             </ul>
@@ -210,7 +212,7 @@ const Footer = () => {
         {/* Copyright */}
         <div className="pt-8 border-t border-border text-center">
           <p className="text-muted-foreground">
-            &copy; {new Date().getFullYear()} PixelsBeing. All Rights Reserved.
+            &copy; {new Date().getFullYear()} Pixels Being. All Rights Reserved.
           </p>
           <p className="text-muted-foreground mt-4">
             <a
