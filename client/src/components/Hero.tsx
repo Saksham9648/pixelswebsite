@@ -28,7 +28,7 @@ const Hero = () => {
               variants={fadeInUp}
               className="text-muted-foreground text-lg md:text-xl mb-8 max-w-2xl"
             >
-              PixelsBeing delivers cutting-edge web development, SEO, and app development services to elevate your brand in the digital landscape.
+              Pixels Being delivers cutting-edge web development, SEO, and app development services to elevate your brand in the digital landscape.
             </motion.p>
             
             <motion.div 

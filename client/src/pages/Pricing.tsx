@@ -7,7 +7,7 @@ import { PricingCardProps } from "@/lib/types";
 const pricingPlans: PricingCardProps[] = [
   {
     title: "Basic",
-    price: "₹15,999",
+    price: "₹6,999",
     description: "Perfect for small businesses just getting started with their online presence.",
     features: [
       { included: true, text: "5-Page Website" },
@@ -20,7 +20,7 @@ const pricingPlans: PricingCardProps[] = [
   },
   {
     title: "Standard",
-    price: "₹29,999",
+    price: "₹19,999",
     description: "Ideal for growing businesses looking to expand their digital footprint.",
     features: [
       { included: true, text: "10-Page Website" },
@@ -34,7 +34,7 @@ const pricingPlans: PricingCardProps[] = [
   },
   {
     title: "Premium",
-    price: "₹59,999",
+    price: "₹29,999+",
     description: "Complete solution for established businesses seeking maximum online impact.",
     features: [
       { included: true, text: "Unlimited Pages" },

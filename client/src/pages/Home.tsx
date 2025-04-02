@@ -68,8 +68,8 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <title>PixelsBeing | Web Development, SEO, and App Development Services</title>
-        <meta name="description" content="PixelsBeing - Professional web development, SEO, and app development services in Lakhimpur, Gonda, Sitapur, and Lucknow." />
+        <title>Pixels Being | Web Development, SEO, and App Development Services</title>
+        <meta name="description" content="Pixels Being - Professional web development, SEO, and app development services in Lakhimpur, Gonda, Sitapur, and Lucknow." />
         <meta name="keywords" content="web developer in Lakhimpur, web developer in Gonda, web developer in Sitapur, best web developer in Lucknow, web development, SEO, app development" />
       </Helmet>
 

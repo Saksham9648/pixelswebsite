@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet";
 import ContactForm from "@/components/ContactForm";
+import { FiInstagram, FiYoutube, FiLinkedin, FiGithub } from "react-icons/fi";
 
 const Contact = () => {
   return (
@@ -52,7 +53,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <h4 className="text-xl font-montserrat font-semibold mb-1">Our Location</h4>
-                      <p className="text-muted-foreground">123 Tech Park, Civil Lines,<br />Lucknow, Uttar Pradesh, India</p>
+                      <p className="text-muted-foreground">Nirmal nager Seth Ghat Road,<br />Lakhimpur, Uttar Pradesh, India</p>
                     </div>
                   </div>
                   
@@ -62,8 +63,8 @@ const Contact = () => {
                     </div>
                     <div>
                       <h4 className="text-xl font-montserrat font-semibold mb-1">Phone Numbers</h4>
-                      <p className="text-muted-foreground mb-1">+91 1234567890</p>
-                      <p className="text-muted-foreground">+91 9876543210</p>
+                      <p className="text-muted-foreground mb-1">+91 8756309900</p>
+                      <p className="text-muted-foreground">+91 8604474985</p>
                     </div>
                   </div>
                   
@@ -73,7 +74,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <h4 className="text-xl font-montserrat font-semibold mb-1">Email Address</h4>
-                      <p className="text-muted-foreground">info@pixelsbeing.com</p>
+                      <p className="text-muted-foreground">pixelsbeing@gmail.com</p>
                     </div>
                   </div>
                   
@@ -83,8 +84,8 @@ const Contact = () => {
                     </div>
                     <div>
                       <h4 className="text-xl font-montserrat font-semibold mb-1">Working Hours</h4>
-                      <p className="text-muted-foreground">Monday - Friday: 9:00 AM - 6:00 PM</p>
-                      <p className="text-muted-foreground">Saturday: 10:00 AM - 4:00 PM</p>
+                      <p className="text-muted-foreground">24 x 7</p>
+                      {/* <p className="text-muted-foreground">Saturday: 10:00 AM - 4:00 PM</p> */}
                     </div>
                   </div>
                 </div>
@@ -92,34 +93,34 @@ const Contact = () => {
                 <div className="mt-8">
                   <h4 className="text-xl font-montserrat font-semibold mb-4">Follow Us</h4>
                   <div className="flex space-x-4">
-                    <a 
-                      href="#" 
-                      className="w-10 h-10 bg-muted rounded-full flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-white transition-colors duration-300"
-                      aria-label="Facebook"
-                    >
-                      <i className="fab fa-facebook-f"></i>
-                    </a>
-                    <a 
-                      href="#" 
-                      className="w-10 h-10 bg-muted rounded-full flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-white transition-colors duration-300"
-                      aria-label="Twitter"
-                    >
-                      <i className="fab fa-twitter"></i>
-                    </a>
-                    <a 
-                      href="#" 
-                      className="w-10 h-10 bg-muted rounded-full flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-white transition-colors duration-300"
-                      aria-label="Instagram"
-                    >
-                      <i className="fab fa-instagram"></i>
-                    </a>
-                    <a 
-                      href="#" 
-                      className="w-10 h-10 bg-muted rounded-full flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-white transition-colors duration-300"
-                      aria-label="LinkedIn"
-                    >
-                      <i className="fab fa-linkedin-in"></i>
-                    </a>
+                    <a
+                href="https://www.instagram.com/pixelsbeing?igsh=NWw5b2ZiaDFhZm5m"
+                className="w-10 h-10 bg-muted rounded-full flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-primary/10 transition-colors duration-300"
+                aria-label="Instagram" target="_blank"
+              >
+                <FiInstagram />
+              </a>
+              <a
+                href="https://youtube.com/@indo-cs?si=gb_tmTx4SOkjIvxK"
+                className="w-10 h-10 bg-muted rounded-full flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-primary/10 transition-colors duration-300"
+                aria-label="Youtube" target="_blank"
+              >
+                <FiYoutube />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/pixels-being-02911635a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                className="w-10 h-10 bg-muted rounded-full flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-primary/10 transition-colors duration-300"
+                aria-label="Linkedin" target="_blank"
+              >
+                <FiLinkedin />
+              </a>
+              <a
+                href="https://github.com/pixelsbeing"
+                className="w-10 h-10 bg-muted rounded-full flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-primary/10 transition-colors duration-300"
+                aria-label="Github" target="_blank"
+              >
+                <FiGithub />
+              </a>
                   </div>
                 </div>
               </div>

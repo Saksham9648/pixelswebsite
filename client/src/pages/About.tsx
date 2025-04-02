@@ -7,8 +7,8 @@ const About = () => {
   return (
     <>
       <Helmet>
-        <title>About Us | PixelsBeing</title>
-        <meta name="description" content="Learn about PixelsBeing - our story, mission and values. Professional web development, SEO, and app development services." />
+        <title>About Us | Pixels Being</title>
+        <meta name="description" content="Learn about Pixels Being - our story, mission and values. Professional web development, SEO, and app development services." />
       </Helmet>
 
       <section className="py-32 relative">
@@ -55,10 +55,10 @@ const About = () => {
             
             <motion.div variants={fadeInUp} initial="initial" animate="animate">
               <h2 className="text-3xl md:text-4xl font-montserrat font-bold mb-6">
-                About <span className="gradient-text">PixelsBeing</span>
+                About <span className="gradient-text">Pixels Being</span>
               </h2>
               <p className="text-muted-foreground text-lg mb-6">
-                Founded in 2018, PixelsBeing has grown from a small team of passionate developers to a full-service digital agency serving clients across India and beyond.
+                Founded in 2018, Pixels Being has grown from a small team of passionate developers to a full-service digital agency serving clients across India and beyond.
               </p>
               <p className="text-muted-foreground text-lg mb-8">
                 Our mission is to bridge the gap between technology and business success. We believe in creating digital experiences that not only look stunning but also drive tangible results for our clients.
